@@ -36,11 +36,6 @@ remove_first:'v' %}
 endif %}
                                 length="{{ asset.size }}"
                                 type="application/octet-stream"
-                                sparkle:os={% if asset contains:'.exe' %}
-                                "windows"
-                                {% else %}
-                                "macos"
-                                {% endif %}
                             \>
                         {% endfor %}
                     </item>
