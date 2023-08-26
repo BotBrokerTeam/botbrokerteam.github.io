@@ -30,7 +30,7 @@ remove_first:'v' %}
                             {% endif %}
                             <enclosure
                                 url="{{ asset.browser_download_url }}"
-                                sparkle:edSignature="dPbFuApoYycPlxaDfC1evUJvHXAS6l+7OVDMxu3yryA="
+                                sparkle:edSignature="trg10TkXRCzr4JfT9kYhOKHbLGCoqwR4lFI7xK6E3UoK/1+pppX41bbxZK9H8WYclTRxGMZExU5DPU0YzEYjDA=="
                                 sparkle:os="macos"
                                 sparkle:version="{{ version }}"
                                 {% if short_version 
