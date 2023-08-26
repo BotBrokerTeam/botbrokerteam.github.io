@@ -1,9 +1,8 @@
 # Where things are
-source              : app
+source              : .
 destination         : ./_site
 collections_dir     : .
-plugins_dir         : _plugins # takes an array of strings and loads 
-plugins in order
+plugins_dir         : _plugins # takes an array of strings and loads plugins in order
 layouts_dir         : _layouts
 data_dir            : _data
 includes_dir        : _includes
@@ -17,8 +16,7 @@ collections:
 # Handling Reading
 safe                : true
 include             : [".htaccess"]
-exclude             : ["Gemfile", "Gemfile.lock", "node_modules", 
-"vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
+exclude             : ["Gemfile", "Gemfile.lock", "node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/"]
 keep_files          : [".git", ".svn"]
 encoding            : "utf-8"
 markdown_ext        : "markdown,mkdown,mkdn,mkd,md"
