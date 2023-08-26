@@ -30,6 +30,8 @@ remove_first:'v' %}
                             {% endif %}
                             <enclosure
                                 url="{{ asset.browser_download_url }}"
+                                sparkle:edSignature="dPbFuApoYycPlxaDfC1evUJvHXAS6l+7OVDMxu3yryA="
+                                sparkle:os="macos"
                                 sparkle:version="{{ version }}"
                                 {% if short_version 
 %}sparkle:shortVersionString="{{ release.tag_name | remove_first:'v' }}"{% 
