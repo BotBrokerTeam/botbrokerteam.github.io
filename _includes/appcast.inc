@@ -18,7 +18,7 @@ markdownify }}]]></description>
 }}</pubDate>
                         {% for asset in release.assets limit:1 %}
                             {% assign build_nums = asset.name | 
-replace_first:'Project.v','' | replace_first:'.b',',' | 
+replace_first:'Tradx.v','' | replace_first:'.b',',' | 
 remove_first:'.zip' | split:',' %}
                             {% if build_nums.size == 2 %}
                                 {% assign version = build_nums[1] %}
