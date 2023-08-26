@@ -16,7 +16,7 @@ updates.</description>
 markdownify }}]]></description>
                         <pubDate>{{ release.published_at | date_to_rfc822 
 }}</pubDate>
-                        {% for asset in release.assets limit:2 %}
+                        {% for asset in release.assets limit:1 %}
                             {% assign build_nums = asset.name | 
 replace_first:'Tradx.v','' | replace_first:'.b',',' | 
 remove_first:'.zip' | remove_first:'.exe' | split:',' %}
@@ -36,6 +36,11 @@ remove_first:'v' %}
 endif %}
                                 length="{{ asset.size }}"
                                 type="application/octet-stream"
+                                {% if asset contains:'.exe' %}
+                                sparkle:os="windows"
+                                {% else %}
+                                sparkle:os="macos"
+                                {% endif %}
                             \>
                         {% endfor %}
                     </item>
