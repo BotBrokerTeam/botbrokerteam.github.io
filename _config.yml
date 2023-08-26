@@ -1,19 +1,19 @@
 # Where things are
-source              : .
-destination         : ./_site
+# source              : .
+# destination         : ./_site
 domain: botbrokerteam.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 url: https://botbrokerteam.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 baseurl: /app/                        # place folder name if the site is served in a subfolder
-collections_dir     : .
-plugins_dir         : _plugins # takes an array of strings and loads plugins in order
-layouts_dir         : _layouts
-data_dir            : _data
-includes_dir        : _includes
-sass:
-  sass_dir: _sass
-collections:
-  posts:
-    output          : true
+# collections_dir     : .
+# plugins_dir         : _plugins # takes an array of strings and loads plugins in order
+# layouts_dir         : _layouts
+# data_dir            : _data
+# includes_dir        : _includes
+# sass:
+#   sass_dir: _sass
+# collections:
+#   posts:
+#     output          : true
 
 
 # Handling Reading
