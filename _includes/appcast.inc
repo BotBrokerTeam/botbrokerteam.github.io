@@ -25,14 +25,15 @@ markdownify }}]]></description>
                             {% endif %}
                             <enclosure
                                 url="{{ asset.browser_download_url }}"
-                                sparkle:version="{{ version }}"
-                                {% if short_version %}sparkle:shortVersionString="{{ short_version }}"{% endif %}
                                 length="{{ asset.size }}"
                                 type="application/octet-stream"
                                 {% if asset.name contains '.exe' %}
                                 sparkle:os="windows"
+                                sparkle:version="{{ version }}+{{ short_version }}"
                                 {% else %}
                                 sparkle:os="macos"
+                                sparkle:version="{{ version }}"
+                                {% if short_version %}sparkle:shortVersionString="{{ short_version }}"{% endif %}
                                 {% endif %}
                             />
                         {% endfor %}
