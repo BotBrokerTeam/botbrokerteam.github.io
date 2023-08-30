@@ -18,8 +18,8 @@ markdownify }}]]></description>
                         {% for asset in release.assets limit:2 %}
                             {% assign build_nums = asset.name | replace_first:'Tradx.v','' | replace_first:'.b',',' | remove_first:'.zip' | remove_first:'.exe' | split:',' %}
                             {% if build_nums.size == 2 %}
-                                {% assign version = build_nums[1] %}
-                                {% assign short_version = build_nums[0] %}
+                                {% assign version = build_nums[0] %}
+                                {% assign short_version = build_nums[1] %}
                             {% else %}
                                 {% assign version = release.tag_name | remove_first:'v' %}
                             {% endif %}
