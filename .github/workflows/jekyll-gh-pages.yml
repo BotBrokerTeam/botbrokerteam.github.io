@@ -15,6 +15,7 @@ jobs:
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
+            gem update --system
             ${{ runner.os }}-gems-
 
       # Use GitHub Deploy Action to build and deploy to Github
