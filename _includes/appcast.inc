@@ -16,7 +16,7 @@ markdownify }}]]></description>
                         <pubDate>{{ release.published_at | date_to_rfc822 
 }}</pubDate>
                         {% for asset in release.assets limit:2 %}
-                            {% if asset.name contains ".zip" or asset.name contains ".exe" %}
+                            {% if asset.name contains ".zip" == false and asset.name contains ".exe" == false %}
                             {% continue %}
                             {% endif %}
 
