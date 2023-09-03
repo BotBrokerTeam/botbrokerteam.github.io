@@ -16,6 +16,10 @@ markdownify }}]]></description>
                         <pubDate>{{ release.published_at | date_to_rfc822 
 }}</pubDate>
                         {% for asset in release.assets limit:2 %}
+                            {% if asset.name contains ".zip" or asset.name contains ".exe" %}
+                            {% continue %}
+                            {% endif %}
+
                             {% assign build_nums = asset.name | replace_first:'Tradx.v','' | replace_first:'.b',',' | remove_first:'.zip' | remove_first:'.exe' | split:',' %}
                             {% if build_nums.size == 2 %}
                                 {% assign version = build_nums[0] %}
@@ -31,7 +35,7 @@ markdownify }}]]></description>
                                 {% if asset.name contains '.exe' %}
                                 sparkle:os="windows"
                                 sparkle:version="{{ version }}+{{ build_number }}"
-                                {% else %}
+                                {% elsif asset.name contains '.zip' %}
                                 sparkle:os="macos"
                                 sparkle:version="{{ version }}"
                                 {% endif %}
